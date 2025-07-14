@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>BBSboost</title>
+<style>
+  body {
+    margin: 0;
+    background-color: #121212;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  h1 {
+    margin-top: 20px;
+    font-size: 2.5rem;
+  }
+  button {
+    width: 90%;
+    max-width: 350px;
+    background-color: #1e88e5;
+    border: none;
+    padding: 15px;
+    margin: 15px 0;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  button:hover {
+    background-color: #1565c0;
+  }
+  .message {
+    background-color: #222;
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 350px;
+    font-size: 1rem;
+    white-space: pre-line;
+  }
+</style>
+</head>
+<body>
+
+<h1>BBSboost</h1>
+
+<button id="btn1">Заказать буст от нашего создателя</button>
+<div id="msg1" class="message" style="display:none;"></div>
+
+<button id="btn2">Заказать буст за голду</button>
+<div id="msg2" class="message" style="display:none;"></div>
+
+<button id="btn3">Вложить голду</button>
+<div id="msg3" class="message" style="display:none;"></div>
+
+<script>
+  document.getElementById('btn1').addEventListener('click', () => {
+    const msg = "ID: 172675019\nНапишите в этот айди за бустом звания, это наш твинк с которого зачастую бустим.";
+    const el = document.getElementById('msg1');
+    el.textContent = msg;
+    el.style.display = 'block';
+  });
+
+  document.getElementById('btn2').addEventListener('click', () => {
+    const msg = "Напишите нам в Telegram @DOF40";
+    const el = document.getElementById('msg2');
+    el.textContent = msg;
+    el.style.display = 'block';
+  });
+
+  document.getElementById('btn3').addEventListener('click', () => {
+    const msg = "Напишите нам в Telegram @DOF40 и выложите голду, после вложения мы дадим вам в пару раз больше!";
+    const el = document.getElementById('msg3');
+    el.textContent = msg;
+    el.style.display = 'block';
+  });
+</script>
+
+</body>
+</html>
